@@ -9,29 +9,33 @@ do {
   producto1 = "";
   producto2 = "";
   producto1 = prompt(
-    "Ingrese el producto que desea comprar (Mouse, Teclado, Monitor)"
+    "Ingrese el producto que desea comprar (campera, remera, zapatillas)"
   ).toLowerCase();
   producto2 = prompt(
-    "Ingrese el producto que desea comprar (Mouse, Teclado, Monitor)"
+    "Ingrese el producto que desea comprar (camepra, remera, zapatillas)"
   ).toLowerCase();
-  if (producto1 === "mouse") {
+  if (producto1 === "campera") {
     suma += 8500;
-  } else if (producto1 === "teclado") {
+  } else if (producto1 === "remera") {
     suma += 12000;
-  } else if (producto1 === "monitor") {
+  } else if (producto1 === "zapatillas") {
     suma += 50000;
   }
 
-  if (producto2 === "mouse") {
+  if (producto2 === "campera") {
     suma += 8500;
-  } else if (producto2 === "teclado") {
+  } else if (producto2 === "remera") {
     suma += 12000;
-  } else if (producto2 === "monitor") {
+  } else if (producto2 === "zapatillas") {
     suma += 50000;
   }
   if (
-    (producto1 === "mouse", producto1 === "teclado", producto1 === "monitor") &&
-    (producto2 === "mouse", producto2 === "teclado", producto2 === "monitor")
+    (producto1 === "campera",
+    producto1 === "remera",
+    producto1 === "zapatillas") &&
+    (producto2 === "campera",
+    producto2 === "remera",
+    producto2 === "zapatillas")
   ) {
     condition = false;
   }
