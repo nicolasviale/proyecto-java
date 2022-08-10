@@ -1,65 +1,87 @@
-//SUMA DE PRODUCTOS
-let producto1;
-let producto2;
-let condition = true;
-let suma = 0;
-debugger;
-do {
-  suma = 0;
-  producto1 = "";
-  producto2 = "";
-  producto1 = prompt(
-    "Ingrese el producto que desea comprar (campera, remera, zapatillas)"
-  ).toLowerCase();
-  producto2 = prompt(
-    "Ingrese el producto que desea comprar (camepra, remera, zapatillas)"
-  ).toLowerCase();
-  if (producto1 === "campera") {
-    suma += 8500;
-  } else if (producto1 === "remera") {
-    suma += 12000;
-  } else if (producto1 === "zapatillas") {
-    suma += 50000;
+const productos = [];
+
+function creoID() {
+  return parseInt(Math.random() * 100000);
+}
+
+class Producto {
+  constructor(id, nombre, importe) {
+    this.id = creoID();
+    this.nombre = nombre;
+    this.importe = importe;
   }
+}
 
-  if (producto2 === "campera") {
-    suma += 8500;
-  } else if (producto2 === "remera") {
-    suma += 12000;
-  } else if (producto2 === "zapatillas") {
-    suma += 50000;
-  }
-  if (
-    (producto1 === "campera",
-    producto1 === "remera",
-    producto1 === "zapatillas") &&
-    (producto2 === "campera",
-    producto2 === "remera",
-    producto2 === "zapatillas")
-  ) {
-    condition = false;
-  }
-} while (condition === false);
+function produ() {
+  productos.push(new productos(id, nombre, importe));
+}
 
-console.log("El precio total es: $" + suma);
+function generarProductos() {
+  productos.push(
+    new Producto(creoID(), "Mouse Logitech Pro Series Pro X Superlight", 19.399)
+  );
+  productos.push(new Producto(creoID(), "Mouse Razer Viper Mini", 7.199));
+  productos.push(
+    new Producto(creoID(), "Mouse HyperX Pulsefire Haste negro", 10.999)
+  );
+  productos.push(
+    new Producto(
+      creoID(),
+      "Teclado bluetooth Logitech Master Series MX Keys QWERTY",
+      21.228
+    )
+  );
+  productos.push(
+    new Producto(
+      creoID(),
+      "Teclado gamer Razer BlackWidow V3 QWERTY Green",
+      25.999
+    )
+  );
+  productos.push(
+    new Producto(
+      creoID(),
+      "Teclado gamer HyperX Alloy Origins 60 QWERTY HyperX",
+      13.999
+    )
+  );
+  productos.push(
+    new Producto(
+      creoID(),
+      "pad Logitech Desk Mat Studio Series 300x700 Colores Xl",
+      3.999
+    )
+  );
+  productos.push(
+    new Producto(
+      creoID(),
+      "Pad gamer Razer Gigantus V2 de tela y caucho xxl 410mm x 940mm x 4mm",
+      8.673
+    )
+  );
+  productos.push(
+    new Producto(
+      creoID(),
+      "Pad gamer HyperX Speed Edition Fury S Pro de caucho y tela xl 420mm x 900mm x 4mm",
+      4.998
+    )
+  );
 
-//SWITCH DE COLORES
+  console.table(productos);
+}
 
-let color = prompt(
-  "Ingrese el color del producto que desee (Negro, Blanco, Gris)"
-);
-color = color.toLowerCase();
+function buscarProducto() {
+  let prod = prompt("ingrese el producto que busca:");
+  const resultado = productos.filter((elemento) =>
+    elemento.nombre.includes(prod)
+  );
+  console.table(resultado);
+}
 
-switch (color) {
-  case "negro":
-    console.log("Si, tenemos el color $", { color }, "disponible");
-    break;
-  case "gris":
-    console.log("Si, tenemos el color $", { color }, "disponible");
-    break;
-  case "blanco":
-    console.log("Si, tenemos el color $", { color }, "disponible");
-    break;
-  default:
-    alert("Seleccione un color disponible (Negro, Blanco, Gris)");
+function calcularProductos() {
+  let total = productos.reduce(
+    (acumulador, producto) => acumulador + producto.importe,
+    0
+  );
+  console.log("total valor de prodctos $:", total);
 }
