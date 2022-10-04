@@ -164,3 +164,52 @@ p {
     outline: none;
 }
 
+.asd{
+    width: 100px;
+}
+
+.comprar-carrito {
+    background-color: royalblue;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 5px;
+    border: none;
+    padding-left: 100px;
+    
+}
+.comprar-carrito:hover {
+    cursor: pointer;
+}
+.comprar-carrito:focus {
+    outline: none;
+}
+
+    #container{
+      width: 30%;
+      height: 30%;
+      background-color:royalblue;
+
+    }
+
+    #image{
+      width: 100%;
+      height: 100%;
+      border:5px solid #fff;
+      box-sizing: border-box;
+
+    }
+
+    #button{
+      width: 10%;
+      height: 10%;
+      padding-left: 70px;
+      border-radius: 10px;
+    }
+
+    .anime{
+        display: flex;
+        justify-content: end;
+        width: 50%;
+        height: 50%;
+    }
