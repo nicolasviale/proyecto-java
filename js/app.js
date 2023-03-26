@@ -129,34 +129,34 @@ const Toast = Swal.mixin({
   }
 })
 
-function get_random_dog_image() {
+// function get_random_dog_image() {
 
-  let primario = Math.floor(Math.random()*10)
-  let secundario = 0
+//   let primario = Math.floor(Math.random()*10)
+//   let secundario = 0
 
-  url = "https://best-manga-anime-wallpapers.p.rapidapi.com/";
+//   url = "https://best-manga-anime-wallpapers.p.rapidapi.com/";
 
-  const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '1e5ae9bd51msh436f2fa6e1d2eb4p1ee695jsn2b23bdf6c1bb',
-		'X-RapidAPI-Host': 'best-manga-anime-wallpapers.p.rapidapi.com'
-	}
-};
+//   const options = {
+// 	method: 'GET',
+// 	headers: {
+// 		'X-RapidAPI-Key': '1e5ae9bd51msh436f2fa6e1d2eb4p1ee695jsn2b23bdf6c1bb',
+// 		'X-RapidAPI-Host': 'best-manga-anime-wallpapers.p.rapidapi.com'
+// 	}
+// };
 
-fetch('https://best-manga-anime-wallpapers.p.rapidapi.com/', options)
-	.then(response => response.json())
-	.then(response => {
-        display_image(response[0].manga_anime[primario].thumbnail)
-  })
-	.catch(err => console.error(err));
-}
+// fetch('https://best-manga-anime-wallpapers.p.rapidapi.com/', options)
+// 	.then(response => response.json())
+// 	.then(response => {
+//         display_image(response[0].manga_anime[primario].thumbnail)
+//   })
+// 	.catch(err => console.error(err));
+// }
 
-function display_image(image_url){
-  document.getElementById("image").src = image_url;
-}
+// function display_image(image_url){
+//   document.getElementById("image").src = image_url;
+// }
 
-get_random_dog_image()
+// get_random_dog_image()
 
 
 
